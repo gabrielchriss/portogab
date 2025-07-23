@@ -618,3 +618,83 @@ footer .cols .links-col a:hover {
         width: 100%;
     }
 }
+/* General responsive rules */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Responsive Grid Fix */
+.projects-grid, .skills-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Navbar: make stack for mobile */
+.navbar .container {
+  flex-direction: column;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.cta {
+  margin-top: 10px;
+}
+
+/* Contact form responsive */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Footer stack */
+footer .cols {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive image */
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .contact-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer .cols {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
